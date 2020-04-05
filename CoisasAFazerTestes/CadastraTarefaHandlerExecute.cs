@@ -41,7 +41,7 @@ namespace CoisasAFazerTestes
 
       var mock = new Mock<IRepositorioTarefas>();
       mock.Setup(x => x.IncluirTarefas(It.IsAny<Tarefa[]>())).Throws(new Exception("Houve um erro"));
-
+ 
       var repo = mock.Object;
 
       var handler = new CadastraTarefaHandler(repo);
